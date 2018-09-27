@@ -33,7 +33,7 @@ def cmeCommandExec(cmeCred,currentTime,cmdExec):
     if (cmdCred[4]=="plaintext"):
         cmeExecCode="cme smb "+cmeCred[1]+" -u "+cmeCred[2]+" -p "+cmeCred[3]+" -x \""+cmdExec+"\""
     elif (cmeCred[4]=="hash"):
-        cmdExecCode="cme smb "+cmeCred[1]+" -H "+cmeCred[2]+" -p "+cmeCred[3]+" -x \""+cmdExec+"\""
+        cmdExecCode="cme smb "+cmeCred[1]+" -u "+cmeCred[2]+" -H "+cmeCred[3]+" -x \""+cmdExec+"\""
     else:
         pass
     print "Performing: "+cmeExecCode
